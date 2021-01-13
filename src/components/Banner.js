@@ -13,19 +13,30 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     backgroundColor: theme.palette.primary.main,
   },
+  background: {
+    position: "absolute",
+    top: 0,
+    width: "100%",
+    zIndex: -2,
+    backgroundImage: "url(banner.jpeg)",
+    backgroundSize: "cover",
+    opacity: 0.8,
+    filter: "brightness(80%)",
+    height: "80vh",
+  },
+  content: {
+    height: "80vh",
+    textAlign: "center",
+    color: "white",
+  },
 }));
 
 export default function Banner() {
   const classes = useStyles();
+
   return (
-    <div style={{position: "relative"}}>
-      <Container
-        style={{
-          height: "80vh",
-          textAlign: "center",
-          color: "white",
-        }}
-      >
+    <div style={{ position: "relative" }}>
+      <Container className={classes.content}>
         <Box py={20}>
           <Typography variant="h1">UPGRADE YOUR WEEKENDS</Typography>
           <span className={classes.underline}></span>
@@ -38,37 +49,9 @@ export default function Banner() {
           <Button variant="contained" color="primary" size="large">
             Book Now
           </Button>
-
-          {/* <div
-          style={{
-            backgroundImage: "url(banner.jpeg)",
-            // height: "100vh",
-            position: "absolute",
-            opacity: 0.8,
-            filter: "brightness(80%)",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: -2,
-            backgroundSize: "cover",
-          }}
-        ></div> */}
         </Box>
       </Container>
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          width: "100%",
-          zIndex: -2,
-          backgroundImage: "url(banner.jpeg)",
-          backgroundSize: "cover",
-          opacity: 0.8,
-          filter: "brightness(80%)",
-          height: "80vh",
-        }}
-      ></div>
+      <div className={classes.background}></div>
     </div>
   );
 }

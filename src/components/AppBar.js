@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import Brightness4OutlinedIcon from "@material-ui/icons/Brightness4Outlined";
 import Brightness5TwoToneIcon from "@material-ui/icons/Brightness5TwoTone";
-import HotelTwoToneIcon from '@material-ui/icons/HotelTwoTone';
+import HotelTwoToneIcon from "@material-ui/icons/HotelTwoTone";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    marginLeft: 10
+    marginLeft: 10,
   },
   image: {
-    width: '100%',
+    width: "100%",
     position: "absolute",
   },
 }));
@@ -33,7 +33,7 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
     <div className={classes.root}>
       <AppBar position="fixed">
         <Toolbar>
-        <HotelTwoToneIcon/>
+          <HotelTwoToneIcon />
           <Typography variant="h6" className={classes.title}>
             HOTEL X
           </Typography>
