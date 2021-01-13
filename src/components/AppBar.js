@@ -49,7 +49,6 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
 
           <Button color="inherit">Rooms</Button>
           <Button color="inherit">Reservations</Button>
-          <Button color="inherit">Sights</Button>
           <Button color="inherit">Contact</Button>
         </Toolbar>
       </AppBar>

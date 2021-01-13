@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
-import Typography from '@material-ui/core/Typography';
+import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +19,8 @@ export default function SimpleContainer() {
   return (
     <>
       <Container
-        style={{ textAlign: "center", paddingTop: 400, color: "white" }}
+        maxWidth="sm"
+        style={{ textAlign: "center", color: "white" }}
       >
         <Typography variant="h1" component="h1">
           UPGRADE YOUR WEEKENDS
@@ -38,7 +39,7 @@ export default function SimpleContainer() {
         <div
           style={{
             backgroundImage: "url(banner.jpeg)",
-            height: "100vh",
+            // height: "100vh",
             position: "absolute",
             opacity: 0.8,
             filter: "brightness(80%)",
@@ -54,5 +55,3 @@ export default function SimpleContainer() {
     </>
   );
 }
-
-//   <img className={classes.image} src="banner.jpeg" alt="Hotel Banner"></img>
