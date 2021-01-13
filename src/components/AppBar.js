@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar({ darkMode, setDarkMode }) {
   const classes = useStyles();
+  const links = [
+    { name: "Rooms", to: "/rooms" },
+    { name: "Reservations", to: "/reservations" },
+    { name: "Contact", to: "/contact" },
+  ];
 
   return (
     <div className={classes.root}>
@@ -47,21 +52,13 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
             inputProps={{ "aria-label": "toggle dark mode" }}
           />
 
-          <Button color="inherit">
-            <Link color="inherit" underline="none" component={RouterLink} to={"/rooms"}>
-              Rooms
-            </Link>
-          </Button>
-          <Button color="inherit">
-            <Link color="inherit" underline="none" component={RouterLink} to={"/reservations"}>
-              Reservations
-            </Link>
-          </Button>
-          <Button color="inherit">
-            <Link color="inherit" underline="none" component={RouterLink} to={"/contact"}>
-              Contact
-            </Link>
-          </Button>
+          {links.map((link) => (
+            <Button color="inherit">
+              <Link color="inherit" underline="none" component={RouterLink} to={link.to}>
+                {link.name}
+              </Link>
+            </Button>
+          ))}
         </Toolbar>
       </AppBar>
       <Toolbar />

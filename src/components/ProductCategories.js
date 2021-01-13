@@ -1,8 +1,11 @@
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
+import Underline from "./Underline";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -144,6 +147,9 @@ export default function ProductCategories() {
 
   return (
     <Container className={classes.root} component="section">
+      <Typography align="center" variant="h3">DISCOVER OUR PRODUCTS</Typography>
+      <Underline />
+
       <div className={classes.images}>
         {images.map((image) => (
           <ButtonBase
@@ -153,24 +159,26 @@ export default function ProductCategories() {
               width: image.width,
             }}
           >
-            <div
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${image.url})`,
-              }}
-            />
-            <div className={classes.imageBackdrop} />
-            <div className={classes.imageButton}>
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <div className={classes.imageMarked} />
-              </Typography>
-            </div>
+            <Link component={RouterLink} to={`/product/${image.title.toLowerCase()}`}>
+              <div
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${image.url})`,
+                }}
+              />
+              <div className={classes.imageBackdrop} />
+              <div className={classes.imageButton}>
+                <Typography
+                  component="h3"
+                  variant="h6"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <div className={classes.imageMarked} />
+                </Typography>
+              </div>
+            </Link>
           </ButtonBase>
         ))}
       </div>
