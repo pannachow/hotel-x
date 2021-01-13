@@ -20,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginLeft: 10,
   },
-  white: {
-    color: "white",
-  },
 }));
 
 export default function ButtonAppBar({ darkMode, setDarkMode }) {
