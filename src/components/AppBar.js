@@ -31,7 +31,7 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
 
   return (
     <div className={classes.root}>
-      <AppBar>
+      <AppBar position="fixed">
         <Toolbar>
         <HotelTwoToneIcon/>
           <Typography variant="h6" className={classes.title}>
@@ -52,6 +52,7 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
           <Button color="inherit">Contact</Button>
         </Toolbar>
       </AppBar>
+      <Toolbar />
     </div>
   );
 }

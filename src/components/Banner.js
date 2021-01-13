@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -14,29 +15,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleContainer() {
+export default function Banner() {
   const classes = useStyles();
   return (
-    <>
+    <div style={{position: "relative"}}>
       <Container
-        maxWidth="sm"
-        style={{ textAlign: "center", color: "white" }}
+        style={{
+          height: "80vh",
+          textAlign: "center",
+          color: "white",
+        }}
       >
-        <Typography variant="h1" component="h1">
-          UPGRADE YOUR WEEKENDS
-        </Typography>
-        <span className={classes.underline}></span>
-        <br/>
-        <Typography variant="h4" component="h4" gutterBottom>
+        <Box py={20}>
+          <Typography variant="h1">UPGRADE YOUR WEEKENDS</Typography>
+          <span className={classes.underline}></span>
+          <br />
+          <Typography variant="h4" gutterBottom>
             Enjoy secret offers up to -20% off
-        </Typography>
-        <br/>
-        <br/>
-        <Button variant="contained" color="primary" size="large">
-          Book Now
-        </Button>
+          </Typography>
+          <br />
+          <br />
+          <Button variant="contained" color="primary" size="large">
+            Book Now
+          </Button>
 
-        <div
+          {/* <div
           style={{
             backgroundImage: "url(banner.jpeg)",
             // height: "100vh",
@@ -50,8 +53,22 @@ export default function SimpleContainer() {
             zIndex: -2,
             backgroundSize: "cover",
           }}
-        ></div>
+        ></div> */}
+        </Box>
       </Container>
-    </>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          width: "100%",
+          zIndex: -2,
+          backgroundImage: "url(banner.jpeg)",
+          backgroundSize: "cover",
+          opacity: 0.8,
+          filter: "brightness(80%)",
+          height: "80vh",
+        }}
+      ></div>
+    </div>
   );
 }
