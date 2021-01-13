@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import useLocalStorageState from "use-local-storage-state";
+import Box from "@material-ui/core/Box";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -8,6 +9,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import AppBar from "./components/AppBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
+import UnderConstruction from "./views/UnderConstruction";
 
 function App() {
   const [darkMode, setDarkMode] = useLocalStorageState(
@@ -29,12 +31,16 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <AppBar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route>boo hoo</Route>
-        </Switch>
-        <Footer />
+        <Box display="flex" flexDirection="column" height="100%">
+          <AppBar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Box flexGrow={1}>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route component={UnderConstruction} />
+            </Switch>
+          </Box>
+          <Footer />
+        </Box>
       </Router>
     </ThemeProvider>
   );
