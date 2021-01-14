@@ -4,7 +4,8 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Underline from "./Underline";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,15 +34,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Banner() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <div style={{ position: "relative" }}>
       <Container className={classes.content}>
         <Box display="flex" flexDirection="column" justifyContent="center" height="80vh">
-          <Typography variant="h1">UPGRADE YOUR WEEKENDS</Typography>
+          <Typography variant={isDesktop ? "h2" : "h4"}>UPGRADE YOUR WEEKENDS</Typography>
           <Underline />
           <br />
-          <Typography variant="h4" gutterBottom>
+          <Typography variant={isDesktop ? "h4" : "h5"} gutterBottom>
             Enjoy secret offers up to -20% off
           </Typography>
           <br />

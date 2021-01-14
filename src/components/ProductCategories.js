@@ -147,7 +147,7 @@ export default function ProductCategories() {
 
   return (
     <Container className={classes.root} component="section">
-      <Typography align="center" variant="h3">
+      <Typography align="center" variant="h4">
         DISCOVER OUR PRODUCTS
       </Typography>
       <Underline />

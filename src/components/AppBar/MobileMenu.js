@@ -9,6 +9,7 @@ import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 import Paper from "@material-ui/core/Paper";
 import Popper from "@material-ui/core/Popper";
+import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import DarkModeSwitch from "./DarkModeSwitch";
 
@@ -59,7 +60,7 @@ export default function MobileMenu({ darkMode, setDarkMode, links }) {
         aria-haspopup="true"
         onClick={handleToggle}
       >
-        <MenuIcon />
+        {open ? <CloseIcon /> : <MenuIcon />}
       </IconButton>
       <Popper
         style={styles.menu}
