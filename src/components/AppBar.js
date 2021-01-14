@@ -10,7 +10,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Brightness4OutlinedIcon from "@material-ui/icons/Brightness4Outlined";
 import Brightness5TwoToneIcon from "@material-ui/icons/Brightness5TwoTone";
-import HotelTwoToneIcon from "@material-ui/icons/HotelTwoTone";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +36,7 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
           <div className={classes.brand}>
             <Link color="inherit" underline="none" component={RouterLink} to={"/"}>
               <Box display="flex" alignItems="center">
-                <HotelTwoToneIcon />
+                <img src="hotel-x-icon.png" alt="Hotel logo" width="48" height="48" />
                 <Typography variant="h6">&nbsp;HOTEL X</Typography>
               </Box>
             </Link>

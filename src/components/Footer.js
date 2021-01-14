@@ -20,7 +20,9 @@ export default function Footer() {
     <Box bgcolor={theme.palette.type === "dark" ? "background.paper" : "primary.light"} py={6}>
       <Container>
         <Box display="flex" justifyContent="space-around">
-          <HotelLogo />
+          <Link component={RouterLink} to={"/"} color="inherit" underline="none">
+            <HotelLogo />
+          </Link>
 
           <div>
             <Typography variant="h6">Get around</Typography>
