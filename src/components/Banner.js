@@ -20,9 +20,14 @@ const useStyles = makeStyles((theme) => ({
     height: "80vh",
   },
   content: {
-    height: "80vh",
+    minHeight: "80vh",
     textAlign: "center",
     color: "white",
+  },
+  book: {
+    width: "fit-content",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 }));
 
@@ -32,7 +37,7 @@ export default function Banner() {
   return (
     <div style={{ position: "relative" }}>
       <Container className={classes.content}>
-        <Box py={20}>
+        <Box display="flex" flexDirection="column" justifyContent="center" height="80vh">
           <Typography variant="h1">UPGRADE YOUR WEEKENDS</Typography>
           <Underline />
           <br />
@@ -41,7 +46,14 @@ export default function Banner() {
           </Typography>
           <br />
           <br />
-          <Button variant="contained" component={Link} to={`/book`} color="secondary" size="large">
+          <Button
+            className={classes.book}
+            variant="contained"
+            component={Link}
+            to={`/book`}
+            color="secondary"
+            size="large"
+          >
             Book Now
           </Button>
         </Box>

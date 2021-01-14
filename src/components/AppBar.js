@@ -52,7 +52,7 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
           />
 
           {links.map((link) => (
-            <Button color="inherit" component={RouterLink} to={link.to}>
+            <Button key={link.to} color="inherit" component={RouterLink} to={link.to}>
               {link.name}
             </Button>
           ))}

@@ -15,3 +15,15 @@ Start development server:
 ```sh
 npm start
 ```
+
+Generate sitemap:
+
+```sh
+npm run sitemap
+```
+
+Deploy to Github Pages:
+
+```sh
+npm run deploy
+```

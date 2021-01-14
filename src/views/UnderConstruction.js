@@ -17,7 +17,7 @@ export default function UnderConstruction() {
       <br />
       <br />
       <Typography align="center" variant="h4">
-        PLEASE REVISIT US SOON FOR MORE
+        PLEASE VISIT US IN 2022 FOR MORE
       </Typography>
       <br />
       <Typography align="center">

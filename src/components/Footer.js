@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             <Typography variant="h6">Get around</Typography>
             {links.map((link) => (
-              <Typography variant="subtitle1">
+              <Typography key={link.to} variant="subtitle1">
                 <Link component={RouterLink} to={link.to} color="inherit">
                   {link.name}
                 </Link>
