@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: "100%",
     zIndex: -2,
-    backgroundImage: "url(banner.jpeg)",
+    backgroundImage: "url(banner.jpg)",
     backgroundSize: "cover",
     opacity: 0.8,
     filter: "brightness(80%)",
