@@ -6,6 +6,18 @@ import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import { useTheme } from "@material-ui/core/styles";
 import HotelLogo from "./HotelLogo";
+import RoomIcon from "@material-ui/icons/Room";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LanguageIcon from "@material-ui/icons/Language";
+
+const styles = {
+  socialMedia: {
+    fontSize: 28,
+  },
+};
 
 export default function Footer() {
   const theme = useTheme();
@@ -37,18 +49,28 @@ export default function Footer() {
 
           <div>
             <Typography variant="h6">Contact</Typography>
-            <Typography variant="subtitle1">Amsterdam, The Netherlands</Typography>
-            <Typography variant="subtitle1">+31 645833745</Typography>
-            <Typography variant="subtitle1">
-              <Link color="inherit" href="mailto:chowpanna@gmail.com">
-                chowpanna@gmail.com
+            <Box display="flex" my={1}>
+              <RoomIcon />
+              <Typography variant="subtitle1">Amsterdam, The Netherlands</Typography>
+            </Box>
+
+            <Box display="flex" justifyContent="space-between" pr={6}>
+              <Link href="https://wa.link/osc6ez" color="inherit">
+                <WhatsAppIcon style={styles.socialMedia} />
               </Link>
-            </Typography>
-            <Typography variant="subtitle1">
-              <Link color="inherit" href="https://pannachow.io">
-                pannachow.io
+              <Link href="https://www.facebook.com/ymchowym/" color="inherit">
+                <FacebookIcon  style={styles.socialMedia} />
               </Link>
-            </Typography>
+              <Link href="https://www.instagram.com/miss.pannapanna/" color="inherit">
+                <InstagramIcon  style={styles.socialMedia} />
+              </Link>
+              <Link href="mailto:chowpanna@gmail.com" color="inherit">
+                <MailOutlineIcon  style={styles.socialMedia} />
+              </Link>
+              <Link href="https://pannachow.io" color="inherit">
+                <LanguageIcon  style={styles.socialMedia} />
+              </Link>
+            </Box>
           </div>
         </Box>
       </Container>
