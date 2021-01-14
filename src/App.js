@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import useLocalStorageState from "use-local-storage-state";
 import Box from "@material-ui/core/Box";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+// https://stackoverflow.com/a/64135466
+import {
+  unstable_createMuiStrictModeTheme as createMuiTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import AppBar from "./components/AppBar";
@@ -11,13 +15,13 @@ import Footer from "./components/Footer";
 import Home from "./views/Home";
 import UnderConstruction from "./views/UnderConstruction";
 
-function App() {
+export default function App() {
   const [darkMode, setDarkMode] = useLocalStorageState(
     "darkMode",
     useMediaQuery("(prefers-color-scheme: dark)")
   );
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createMuiTheme({
         palette: {
@@ -45,5 +49,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;

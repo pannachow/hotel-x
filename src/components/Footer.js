@@ -69,7 +69,7 @@ export default function Footer() {
 
             <Box display="flex">
               {socialMediaLinks.map((link) => (
-                <Box mr={4}>
+                <Box key={link.href} mr={4}>
                   <Link href={link.href} color="inherit">
                     <link.type style={styles.socialMedia} />
                   </Link>

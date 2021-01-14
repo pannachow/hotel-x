@@ -1,3 +1,4 @@
+import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Underline from "../components/Underline";
 import BuildIcon from "@material-ui/icons/Build";
@@ -5,7 +6,7 @@ import WarningIcon from '@material-ui/icons/Warning';
 
 export default function UnderConstruction() {
   return (
-    <>
+    <Box p={2}>
       <Typography align="center">
         <WarningIcon fontSize="large" />
       </Typography>
@@ -23,6 +24,6 @@ export default function UnderConstruction() {
       <Typography align="center">
         <BuildIcon fontSize="large" />
       </Typography>
-    </>
+    </Box>
   );
 }
