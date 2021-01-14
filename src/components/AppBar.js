@@ -52,10 +52,8 @@ export default function ButtonAppBar({ darkMode, setDarkMode }) {
           />
 
           {links.map((link) => (
-            <Button color="inherit">
-              <Link color="inherit" underline="none" component={RouterLink} to={link.to}>
-                {link.name}
-              </Link>
+            <Button color="inherit" component={RouterLink} to={link.to}>
+              {link.name}
             </Button>
           ))}
         </Toolbar>
