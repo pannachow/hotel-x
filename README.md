@@ -1,6 +1,8 @@
 # hotel-x
 
-A website for Hotel X.
+A website for Hotel X. Visit [https://pannachow.io/hotel-x](https://pannachow.io/hotel-x) for preview.
+
+![Screenshot](screenshot.jpg)
 
 ## Development
 
