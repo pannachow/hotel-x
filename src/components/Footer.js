@@ -36,7 +36,7 @@ export default function Footer() {
     { href: "https://www.facebook.com/ymchowym", type: FacebookIcon },
     { href: "https://www.instagram.com/miss.pannapanna", type: InstagramIcon },
     { href: "mailto:chowpanna@gmail.com", type: MailOutlineIcon },
-    { href: "https://pannachow.io", type: LanguageIcon },
+    { href: "https://pannachow.github.io", type: LanguageIcon },
   ];
 
   return (

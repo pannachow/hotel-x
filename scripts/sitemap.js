@@ -12,7 +12,7 @@ const links = [
 
 (async function() {
     // create output stream
-    const stream = new SitemapStream({ hostname: "https://pannachow.io" });
+    const stream = new SitemapStream({ hostname: "https://pannachow.github.io" });
 
     // generate sitemap
     const buffer = await streamToPromise(Readable.from(links).pipe(stream));

@@ -1,6 +1,6 @@
 # hotel-x
 
-A website for Hotel X. Visit [https://pannachow.io/hotel-x](https://pannachow.io/hotel-x) for preview.
+A website for Hotel X. Visit [https://pannachow.github.io/hotel-x](https://pannachow.github.io/hotel-x) for preview.
 
 ![Screenshot](screenshot.jpg)
 
